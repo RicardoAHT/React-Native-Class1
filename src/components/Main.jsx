@@ -1,11 +1,11 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 //import Constants from "expo-constants"
-import Challenges from './Challenges'
-import Credits from './Credits'
 import Imagenes from './Imagenes'
 import AppBar from './AppBar'
-import { Switch, Route, Routes } from "react-router-native"
+import { Route, Routes } from "react-router-native"
+import HomePage from '../pages/HomePage'
+import LogInPage from '../pages/LogInPage'
 
 export default function Main() {
   return (
@@ -13,10 +13,9 @@ export default function Main() {
     > 
       <AppBar/>
       <Routes>
-        <Route path="/" element={<Challenges />} />
-        <Route path="/signin" element={<Credits />} />
-        <Route path="/images" element={<Imagenes />} />
-      
+        <Route path="/" element={<HomePage />} />
+        <Route path="/signin" element={<LogInPage />} />
+        <Route path="/images" element={<Imagenes />} />   
       </Routes>
     </View>
   )
